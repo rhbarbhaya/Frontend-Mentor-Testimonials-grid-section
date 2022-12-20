@@ -1,0 +1,124 @@
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%)
+}
+
+#testimonial-grid-container{
+    padding: 5% 3%;
+}
+
+#testimonial-1 {
+    position: relative;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    z-index: 0;
+}
+
+#testimonial-2 {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+#testimonial-4 {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+#testimonial-5, #testimonial-3  {
+    background-color: white;
+    color: hsl(217, 19%, 35%)
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.header img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.grid-item p {
+    opacity: 70%;   
+}
+
+.header .name {
+    opacity: 100%;
+    font-size: 1rem;
+}
+
+#quote {
+    position: absolute;
+    right: 15%;
+    top: 0;
+    z-index: -1;
+    opacity: 90%;
+}
+
+@media (min-width: 576px){
+    #testimonial-grid-container, #main-left, #top, #bottom {
+        display: flex;
+    }
+
+    #testimonial-1, #testimonial-4  {
+        flex-basis: 65%;
+    }
+    
+    #testimonial-2, #testimonial-3  {
+        flex-basis: 35%;
+    }
+
+    #testimonial-grid-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    #testimonial-5{
+        flex-basis: 25%;
+    }
+
+    #top, #bottom  {
+        flex-basis: 50%;
+    }
+
+    #main-left {
+        flex-direction: column;
+        flex-basis: 75%;
+
+    }
+
+    #main-left .grid-item {
+        margin-right: 15px;
+    }
+}
